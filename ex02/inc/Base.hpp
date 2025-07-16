@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.cpp                                :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 17:25:54 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/07/16 20:22:32 by jlara-na         ###   ########.fr       */
+/*   Created: 2025/07/16 20:26:45 by jlara-na          #+#    #+#             */
+/*   Updated: 2025/07/16 21:40:38 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ScalarConverter.hpp"
+#pragma once
 
-ScalarConverter::ScalarConverter(){}
+# include <iostream>
 
-ScalarConverter::~ScalarConverter(){}
+class Base
+{
+    public:
+        virtual ~Base();
+};
 
-ScalarConverter::ScalarConverter(const ScalarConverter &other){
-	*this = other;
-}
-
-ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other){
-	if (this != &other)
-		;
-	return (*this);
-}
-
-void ScalarConverter::convert(const std::string &input){
-	
-}
+class A : public Base {};
+class B : public Base {};
+class C : public Base {};

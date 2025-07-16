@@ -6,7 +6,7 @@
 #    By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 16:22:11 by jlara-na          #+#    #+#              #
-#    Updated: 2025/06/03 16:22:26 by jlara-na         ###   ########.fr        #
+#    Updated: 2025/07/16 21:26:44 by jlara-na         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ INC_DIR			:=		inc/
 
 MAKEFLAGS		:=		--no-print-directory
 CXX = c++
-CXXFLAGS =	-Wall -Wextra -Werror -std=c++98 -I inc
+CXXFLAGS =	-Wall -Wextra -Werror -std=c++98 -I inc -fsanitize=leak
 
 #-----------SHORT CUTS-----------
 
@@ -74,6 +74,7 @@ CUSTOM_4		=		\033[38:5:101m
 
 #---------SRC OBJ DEP INC---------
 SRC_FILES		=		main					\
+						Base					\
 
 SRC 			= 		$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ 			= 		$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
