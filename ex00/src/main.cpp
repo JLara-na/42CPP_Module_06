@@ -6,7 +6,7 @@
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:23:17 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/06/03 19:20:33 by jlara-na         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:46:39 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int main(void)
 {
-    ScalarConverter::convert("58F");
+    ScalarConverter::convert("13243342");
 }
