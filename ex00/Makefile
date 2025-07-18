@@ -6,7 +6,7 @@
 #    By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 16:19:34 by jlara-na          #+#    #+#              #
-#    Updated: 2025/06/03 18:34:29 by jlara-na         ###   ########.fr        #
+#    Updated: 2025/07/18 18:13:27 by jlara-na         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ SRC_FILES		=		main					\
 SRC 			= 		$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ 			= 		$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 DEPS 			= 		$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
-INCS			= 		$(addprefix $(INCLUDE), $(addsuffix .h, $(INC_FILES)))
+INCS			= 		$(addprefix $(INCLUDE), $(addsuffix .hpp, $(INC_FILES)))
 
 #----------CACHE------------------
 OBJF			=		.cache_exists
