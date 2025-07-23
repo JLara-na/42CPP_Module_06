@@ -6,7 +6,7 @@
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 17:25:54 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/07/18 21:59:12 by jlara-na         ###   ########.fr       */
+/*   Updated: 2025/07/23 15:55:46 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,9 @@ void	print_int(const std::string &str){
 void	print_float(const std::string &str){
 	float	f = static_cast<float>(strtod(str.c_str(), NULL));
 	double	d = static_cast<double>(f);
-	int	i = static_cast<int>(f);
+	int	i = static_cast<int>(d);
 	
-	if (i > 32 && i < 127 && isprint(i) && !(str == "-inff" || str == "+inff" || str == "nanf"))
+	if (d - floor(f) == 0 && i > 32 && i < 127 && isprint(i) && !(str == "-inff" || str == "+inff" || str == "nanf"))
 		std::cout << "Char   : '" << static_cast<char>(i) << "'" << std::endl;
 	else
 		std::cout << "Char   : Not poissible" << std::endl;
@@ -108,7 +108,7 @@ void	print_double(const std::string &str){
 	float	f = static_cast<float>(d);
 
 	std::cout.precision(10);
-	if (i > 32 && i < 127 && isprint(i) && !(str == "-inf" || str == "+inf" || str == "nan"))
+	if (d - floor(d) == 0 && i > 32 && i < 127 && isprint(i) && !(str == "-inf" || str == "+inf" || str == "nan"))
 		std::cout << "Char   : '" << static_cast<char>(i) << "'" << std::endl;
 	else
 		std::cout << "Char   : Not poissible" << std::endl;
